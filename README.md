@@ -282,7 +282,7 @@ Future-proof security implementation using post-quantum cryptography:
 ### Getting Help
 - **Documentation Issues**: [GitHub Issues](https://github.com/Chronos-Vault/chronos-vault-docs/issues)
 - **Community Support**: [GitHub Discussions](https://github.com/Chronos-Vault/chronos-vault-docs/discussions)
-- **Professional Support**: docs@chronosvault.org
+- **Professional Support**: chronosvault@chronosvault.org
 
 ### Community Contributions
 - **Documentation Bounties**: Earn rewards for documentation improvements
