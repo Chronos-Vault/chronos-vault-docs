@@ -3,8 +3,6 @@
 > Comprehensive documentation hub for the Chronos Vault ecosystem - technical guides, whitepapers, integration examples, and educational resources.
 
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Documentation](https://img.shields.io/badge/Docs-Latest-blue)](https://docs.chronosvault.org)
-[![Whitepaper](https://img.shields.io/badge/Whitepaper-Available-green)](https://whitepaper.chronosvault.org)
 
 ## 📚 Documentation Overview
 
@@ -119,24 +117,24 @@ chronos-vault-docs/
 ## 🔥 Key Documents
 
 ### 🚀 Quick Start Resources
-- **[Setup Guide](technical/setup-guides/SETUP_GUIDE.md)**: Complete installation instructions
-- **[Deployment Guide](technical/setup-guides/DEPLOYMENT_GUIDE.md)**: Production deployment strategies
-- **[Integration Examples](technical/integration/INTEGRATION_EXAMPLES.md)**: Code examples and tutorials
+- **[Setup Guide](SETUP_GUIDE.md)**: Complete installation instructions
+- **[Deployment Guide](DEPLOYMENT_GUIDE.md)**: Production deployment strategies
+- **[Integration Examples](INTEGRATION_EXAMPLES.md)**: Code examples and tutorials
 
 ### 📋 Technical Specifications
-- **[Technical README](technical/architecture/TECHNICAL_README.md)**: Complete technical overview
-- **[Security Architecture](technical/architecture/SECURITY_ARCHITECTURE.md)**: Security design principles
-- **[API Reference](technical/api-reference/API_REFERENCE.md)**: Complete API documentation
+- **[Technical README](TECHNICAL_README.md)**: Complete technical overview
+- **[Security Architecture](SECURITY_ARCHITECTURE.md)**: Security design principles
+- **[API Reference](API_REFERENCE.md)**: Complete API documentation
 
 ### 📖 Research Documents
-- **[CVT Whitepaper](whitepapers/CVT_WHITEPAPER.md)**: Complete platform whitepaper
-- **[Trinity Protocol Deep Dive](whitepapers/trinity-protocol-deep-dive.md)**: Technical protocol specification
-- **[Tokenomics Specification](whitepapers/CVT_TOKENOMICS_SPECIFICATION.md)**: Economic model documentation
+- **[CVT Whitepaper](CVT_WHITEPAPER.md)**: Complete platform whitepaper
+- **[Trinity Protocol Deep Dive](trinity-protocol-mathematical-foundation.md)**: Technical protocol specification
+- **[Tokenomics Specification](CVT_TOKENOMICS_SPECIFICATION.md)**: Economic model documentation
 
 ### 🏢 Enterprise Documentation
-- **[Security Communication Plan](compliance/security-compliance/SECURITY_COMMUNICATION_PLAN.md)**: Security incident procedures
-- **[Emergency Response](compliance/security-compliance/SECURITY_EMERGENCY_RESPONSE.md)**: Crisis management protocols
-- **[Compliance Documentation](compliance/certifications/)**: Regulatory compliance guides
+- **[Security Communication Plan](SECURITY_COMMUNICATION_PLAN.md)**: Security incident procedures
+- **[Emergency Response](SECURITY_EMERGENCY_RESPONSE.md)**: Crisis management protocols
+- **[Compliance Documentation](certifications/)**: Regulatory compliance guides
 
 ## 🌟 Featured Content
 
