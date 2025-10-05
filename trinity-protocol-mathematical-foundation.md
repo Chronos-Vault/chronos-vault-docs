@@ -12,7 +12,7 @@ Security = P(Ethereum_safe) ∩ P(Solana_safe) ∩ P(TON_safe)
 
 Where:
 - P(Ethereum_safe) = 1 - P(Ethereum_attack)
-- P(Solana_safe) = 1 - P(Solana_attack)  
+- P(Solana_safe) = 1 - P(Solana_attack)
 - P(TON_safe) = 1 - P(TON_attack)
 
 Attack Success Probability = P(Ethereum_attack) × P(Solana_attack) × P(TON_attack)
@@ -134,7 +134,7 @@ Throughput = (Batch_Size × Chains × Pipeline_Stages) / Average_Block_Time
            = (50 × 3 × 2) / 0.8 seconds
            = 300 / 0.8
            = 375 TPS per pipeline
-           
+
 Total with 5 pipelines = 375 × 5 = 1,875 TPS ≈ 2,000 TPS
 ```
 
@@ -195,7 +195,7 @@ Security Budget = min(chain_security_budgets) × independence_factor
                 = min($40B, $5B, $2B) × 0.001
                 = $2B × 0.001
                 = $2M effective attack budget
-                
+
 Actual Attack Cost = $50M >> $2M
 Therefore: Economically secure
 ```
@@ -335,4 +335,6 @@ Trinity Protocol's mathematics prove it's not just better—it's **inevitable**:
 
 **The mathematics don't lie: Trinity Protocol is the only solution that solves all fundamental problems simultaneously.**
 
-For YZi Labs: **This isn't about believing in a vision—it's about investing in mathematical inevitability.**
+---
+
+*This document provides the mathematical foundation for Trinity Protocol's security guarantees. For implementation details, see the [Technical Documentation](https://github.com/Chronos-Vault/chronos-vault-docs).*
