@@ -8,21 +8,21 @@ Trinity Protocol is based on **Byzantine Fault Tolerance (BFT) extended across m
 #### **Mathematical Security Model**
 
 ```
-Security = P(Ethereum_safe) ∩ P(Solana_safe) ∩ P(TON_safe)
+Security = P(Arbitrum_safe) ∩ P(Solana_safe) ∩ P(TON_safe)
 
 Where:
-- P(Ethereum_safe) = 1 - P(Ethereum_attack)
+- P(Arbitrum_safe) = 1 - P(Arbitrum_attack)
 - P(Solana_safe) = 1 - P(Solana_attack)
 - P(TON_safe) = 1 - P(TON_attack)
 
-Attack Success Probability = P(Ethereum_attack) × P(Solana_attack) × P(TON_attack)
+Attack Success Probability = P(Arbitrum_attack) × P(Solana_attack) × P(TON_attack)
 ```
 
 #### **Real-World Numbers**
 
 ```
 Individual Network Attack Probabilities:
-├── Ethereum: P(attack) ≈ 10^-6 (0.0001%)
+├── Arbitrum L2: P(attack) ≈ 10^-6 (0.0001%)
 ├── Solana: P(attack) ≈ 10^-6 (0.0001%)
 ├── TON: P(attack) ≈ 10^-6 (0.0001%)
 
@@ -116,12 +116,12 @@ Implemented Algorithms:
 
 ```
 Single Chain Throughput:
-├── Ethereum: ~15 TPS
+├── Arbitrum L2: ~15 TPS
 ├── Solana: ~3,000 TPS
 ├── TON: ~1,000 TPS
 
 Trinity Protocol Throughput:
-Theoretical Maximum = min(Ethereum, Solana, TON) = 15 TPS
+Theoretical Maximum = min(Arbitrum L2, Solana, TON) = 15 TPS
 
 Optimized Trinity Protocol:
 ├── Parallel Processing: 3 chains process simultaneously
@@ -208,7 +208,7 @@ Trinity Protocol uses a **cross-chain PBFT** algorithm:
 
 ```
 PBFT Requirements:
-- Network Size: n = 3 (Ethereum, Solana, TON)
+- Network Size: n = 3 (Arbitrum L2, Solana, TON)
 - Fault Tolerance: f = 1 (can tolerate 1 faulty chain)
 - Safety Requirement: n > 3f → 3 > 3(1) = 3 ✓
 
@@ -227,7 +227,7 @@ Mathematical Properties:
 
 ```
 Finality Calculation:
-├── Ethereum: Probabilistic (12 confirmations ≈ 2.4 minutes)
+├── Arbitrum L2: Probabilistic (12 confirmations ≈ 2.4 minutes)
 ├── Solana: Practical (32 slots ≈ 12.8 seconds)
 ├── TON: Practical (5 seconds average)
 
