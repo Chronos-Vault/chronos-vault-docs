@@ -1,58 +1,78 @@
-# Chronos Vault Documentation
+<div align="center">
 
-> Complete documentation for Trinity Protocol multi-chain security vault platform
+# CHRONOS VAULT DOCS
 
-## V3 Deployment Status - October 8, 2025
+### Official Documentation
 
-### Circuit Breaker Contracts (Arbitrum Sepolia)
-- **CrossChainBridgeV3**: `0x39601883CD9A115Aba0228fe0620f468Dc710d54`
-- **CVTBridgeV3**: `0x00d02550f2a8Fd2CeCa0d6b7882f05Beead1E5d0`
-- **EmergencyMultiSig**: `0xFafCA23a7c085A842E827f53A853141C8243F924`
+![Markdown](https://img.shields.io/badge/Markdown-000000?style=for-the-badge&logo=markdown&logoColor=white)
+![Documentation](https://img.shields.io/badge/Docs-FF6B6B?style=for-the-badge&logo=gitbook&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)
 
-## Documentation Index
+**Complete Documentation for Chronos Vault Platform**
 
-### Getting Started
-- [API Reference](./API_REFERENCE.md) - Complete REST API
-- [Deployment Guide](./DEPLOYMENT_GUIDE.md) - Deploy Trinity Protocol
-- [Technical README](./TECHNICAL_README.md) - Architecture overview
-- [Integration Examples](./INTEGRATION_EXAMPLES.md) - Code samples
+[Website](https://chronosvault.org) • [SDK](https://github.com/Chronos-Vault/chronos-vault-sdk) • [Smart Contracts](https://github.com/Chronos-Vault/chronos-vault-contracts)
 
-### Security & Architecture
-- [Security Architecture](./SECURITY_ARCHITECTURE.md) - Trinity Protocol design
-- [Trinity Protocol Mathematical Foundation](./trinity-protocol-mathematical-foundation.md)
-- [Arbitrum Deployment](./ARBITRUM_DEPLOYMENT.md)
-- [Solana Deployment](./SOLANA_DEPLOYMENT.md)
-
-### Token & Economics
-- [CVT Tokenomics](./CVT_TOKENOMICS_SPECIFICATION.md)
-- [CVT Whitepaper](./CVT_WHITEPAPER.md)
-
-### Advanced Topics
-- [Wallet Integration API](./wallet-integration-api.md)
-- [Performance Optimization](./PERFORMANCE_OPTIMIZATION_GUIDE.md)
-
-## Trinity Protocol Architecture
-
-**Arbitrum L2 (PRIMARY)** - Main security layer, 95% lower fees  
-**Solana (MONITOR)** - High-frequency validation, 2000+ TPS  
-**TON (BACKUP)** - Quantum-resistant emergency recovery
-
-**Attack Probability**: 10^-18
-
-## Quick Start
-
-```bash
-git clone https://github.com/Chronos-Vault/chronos-vault-platform-.git
-export ETHEREUM_NETWORK=arbitrum
-npx hardhat run scripts/deploy-v3-with-multisig.cjs --network arbitrumSepolia
-```
-
-## Community
-
-- **Discord**: https://discord.gg/WHuexYSV
-- **X**: https://x.com/chronosvaultx
-- **Email**: chronosvault@chronosvault.org
+</div>
 
 ---
 
-*Last Updated: October 8, 2025*
+## 📚 Overview
+
+Official documentation for Chronos Vault - the world's most secure multi-chain digital vault platform powered by Trinity Protocol.
+
+## 📖 Documentation Structure
+
+### Getting Started
+- **Introduction** - What is Chronos Vault?
+- **Quick Start** - Get up and running in 5 minutes
+- **Architecture** - Understanding Trinity Protocol
+- **Security Model** - How we protect your assets
+
+### User Guides
+- **Creating Vaults** - Step-by-step vault creation
+- **Wallet Setup** - MetaMask, Phantom, TON Keeper
+- **Atomic Swaps** - Cross-chain asset exchanges
+- **Security Features** - Multi-sig, time-locks, quantum resistance
+
+### Developer Documentation
+- **SDK Reference** - Complete API documentation
+- **Smart Contracts** - Contract specifications
+- **Integration Guide** - Add Chronos to your dApp
+- **Code Examples** - Real-world implementations
+
+### Technical Deep Dives
+- **Trinity Protocol** - 2-of-3 multi-chain consensus
+- **Circuit Breaker** - Security thresholds explained
+- **HTLC Swaps** - Hash Time-Locked Contracts
+- **Zero-Knowledge Proofs** - Privacy layer
+
+### API Reference
+- **REST API** - Backend endpoints
+- **WebSocket** - Real-time updates
+- **Blockchain RPC** - Chain-specific calls
+
+## 🚀 Quick Links
+
+- [Trinity Protocol Whitepaper](./technical/trinity-protocol.md)
+- [API Documentation](./api/README.md)
+- [SDK Guide](./sdk/getting-started.md)
+- [Security Audit Reports](./security/audits.md)
+
+## 🔗 Resources
+
+- **Website**: [chronosvault.org](https://chronosvault.org)
+- **GitHub**: [github.com/Chronos-Vault](https://github.com/Chronos-Vault)
+- **Community**: Join our Discord
+- **Support**: support@chronosvault.org
+
+## 📄 License
+
+MIT License - see [LICENSE](LICENSE) for details
+
+---
+
+<div align="center">
+
+**Documentation maintained by the Chronos Vault Team**
+
+</div>
