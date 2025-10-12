@@ -1,5 +1,11 @@
 # Chronos Vault Documentation
 
+
+![Documentation](https://img.shields.io/badge/docs-complete-success)
+![API Reference](https://img.shields.io/badge/API-documented-blue)
+![Contributing](https://img.shields.io/badge/contributions-welcome-brightgreen)
+![License](https://img.shields.io/badge/license-MIT-blue)
+
 ## Mathematical Defense Layer Architecture
 
 Welcome to the comprehensive documentation for Chronos Vault - the world's first mathematically provable blockchain security vault platform.
