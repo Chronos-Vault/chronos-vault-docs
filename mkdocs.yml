@@ -1,0 +1,30 @@
+site_name: Chronos Vault Documentation
+site_description: Mathematical Defense Layer - Formally Verified Blockchain Security
+site_url: https://docs.chronosvault.io
+repo_url: https://github.com/Chronos-Vault/chronos-vault-docs
+repo_name: Chronos-Vault/chronos-vault-docs
+
+theme:
+  name: material
+  palette:
+    primary: purple
+    accent: pink
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - toc.integrate
+
+nav:
+  - Home: index.md
+  - Architecture: docs/mdl-architecture.md
+  - Trinity Protocol: docs/trinity-protocol.md
+  - API Reference: docs/api-reference.md
+  - Formal Verification: formal-verification/README.md
+  - Security: docs/security-guarantees.md
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.arithmatex
