@@ -54,57 +54,47 @@ Help the world understand:
 ### 2. Getting Started
 
 ```bash
-# Clone the repositories
+# Clone the repository
 git clone https://github.com/Chronos-Vault/chronos-vault-platform-.git
-git clone https://github.com/Chronos-Vault/chronos-vault-security.git
-git clone https://github.com/Chronos-Vault/chronos-vault-contracts.git
+cd chronos-vault-platform-
 
 # Install dependencies
-cd chronos-vault-platform-
 npm install
 
 # Set up environment
 cp .env.example .env
-# Add your blockchain RPC URLs and API keys
+# Add your configuration
 
 # Run development server
 npm run dev
-
-# Verify formal proofs (requires Lean 4)
-cd ../chronos-vault-security/formal-proofs
-lake build
 ```
 
 ### 3. Development Workflow
 
 1. **Fork** the repository
 2. **Create a feature branch**: `git checkout -b feat/amazing-feature`
-3. **Write code** following our standards (see below)
+3. **Write code** following our standards
 4. **Test thoroughly** - we're protecting real assets
-5. **Add tests** for new functionality
-6. **Update documentation** if needed
-7. **Commit** with clear messages: `feat(module): add quantum-safe key rotation`
-8. **Push** to your fork
-9. **Open a Pull Request** with detailed description
+5. **Commit** with clear messages: `feat(module): add feature`
+6. **Push** to your fork
+7. **Open a Pull Request** with detailed description
 
 ### 4. Code Standards
 
 #### Security First
-- Every function that touches assets must be formally verified
+- Every function that touches assets must be thoroughly tested
 - No shortcuts, no "TODO: add security later"
-- If you can't prove it mathematically, don't ship it
+- If you can't prove it's secure, don't ship it
 
 #### Clean Code
 - TypeScript strict mode enabled
 - Comprehensive JSDoc comments
 - Clear variable/function names
-- No magic numbers or hardcoded values
 
 #### Testing
 - Unit tests for all business logic
 - Integration tests for cross-chain operations
 - End-to-end tests for user flows
-- Formal verification for security-critical code
 
 #### Commit Messages
 Follow conventional commits:
@@ -112,147 +102,39 @@ Follow conventional commits:
 - `fix(module): resolve bug`
 - `docs(module): update documentation`
 - `test(module): add test coverage`
-- `refactor(module): improve code structure`
-
-## Mathematical Rigor
-
-When contributing to security modules:
-
-### Required for All Cryptographic Code:
-1. **Formal specification** - Write what the code should do mathematically
-2. **Implementation** - Write the actual code
-3. **Formal proof** - Prove it's correct using Lean 4
-4. **Tests** - Verify it works in practice
-
-### Example Workflow:
-```lean
--- Formal specification (Lean 4)
-theorem vdf_time_lock_secure (t : ℕ) (computation : VDFComputation) :
-  computation.iterations = t →
-  ∀ (faster_computation : Computation),
-    faster_computation.output = computation.output →
-    faster_computation.time ≥ t
-```
-
-```typescript
-// Implementation (TypeScript)
-export class VDFTimeLock {
-  computeProof(iterations: number): VDFProof {
-    // Implementation proven correct by Lean theorem above
-  }
-}
-```
-
-```typescript
-// Tests
-test('VDF cannot be bypassed', async () => {
-  const vdf = new VDFTimeLock();
-  const proof = await vdf.computeProof(1000000);
-  expect(proof.verified).toBe(true);
-});
-```
 
 ## Community Values
 
 ### 🎯 Excellence Over Speed
-We'd rather take time to get it right than ship fast and break things. Assets are at stake.
+We'd rather take time to get it right than ship fast and break things.
 
 ### 🔬 Science Over Hype
 Every claim must be provable. We don't market vaporware.
 
 ### 🌍 Collaboration Over Competition
-We're all building the future of secure digital asset storage together.
+We're all building the future together.
 
 ### 💎 Open Source Over Closed Doors
-Transparency builds trust. All code, all proofs, all designs - public.
-
-## Recognition & Rewards
-
-### Contributor Hall of Fame
-Major contributors will be featured in:
-- Our documentation
-- Project README
-- Website acknowledgments
-- Conference presentations
-
-### CVT Token Rewards
-Significant contributions earn CVT tokens:
-- Major security improvements: 1000-5000 CVT
-- Smart contract enhancements: 500-2000 CVT
-- Formal verification proofs: 2000-10000 CVT
-- Critical bug discoveries: 5000-20000 CVT
-
-### Career Opportunities
-Exceptional contributors may be invited to join Chronos Vault core team.
-
-## Areas We Need Help
-
-### 🔥 High Priority
-- Formal verification of additional smart contract functions
-- Circom circuit optimization for faster ZK proof generation
-- Cross-chain bridge security audits
-- Quantum-resistant signature scheme optimization
-
-### 🎯 Medium Priority
-- Additional vault type implementations
-- Frontend UX improvements
-- Mobile wallet integration
-- Performance optimization
-
-### 💡 Ideas Welcome
-- Novel security mechanisms
-- Better visualization of cryptographic proofs
-- Educational content
-- Developer tools and utilities
+Transparency builds trust.
 
 ## Questions?
 
 ### Technical Questions
-- Open an issue in the relevant repository
-- Join our Discord community
-- Ask in GitHub Discussions
+- Open an issue in the repository
+- Join our community discussions
 
 ### Security Issues
 **DO NOT** open public issues for security vulnerabilities.
 Email: security@chronosvault.io
-
-We have a responsible disclosure program with bounties up to 100,000 CVT.
-
-## Code of Conduct
-
-### Expected Behavior
-- Be respectful and professional
-- Provide constructive feedback
-- Help newcomers learn
-- Focus on technical merit
-- Celebrate others' contributions
-
-### Unacceptable Behavior
-- Harassment or discrimination
-- Spam or self-promotion
-- Plagiarism or IP violations
-- Publishing others' private information
-- Trolling or inflammatory comments
 
 ## Legal
 
 ### Licensing
 By contributing, you agree that your contributions will be licensed under the MIT License.
 
-### Contributor License Agreement
-Your first PR will include a CLA signature confirming:
-- You have the right to contribute the code
-- You grant Chronos Vault perpetual rights to use it
-- Your contribution is original or properly attributed
-
 ## The Journey Ahead
 
-Chronos Vault is more than a project - it's a **movement toward provable security**. Every contribution, no matter how small, helps build a future where:
-
-- Users **know** their assets are secure (not just hope)
-- Security is **proven** with math (not promised by auditors)
-- Governance is **trustless** (not dependent on humans)
-- Privacy is **guaranteed** (not just encrypted)
+Chronos Vault is more than a project - it's a **movement toward provable security**. Every contribution helps build a future where users **know** their assets are secure.
 
 **Welcome aboard. Let's build the future of blockchain security together.**
 
