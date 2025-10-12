@@ -65,7 +65,6 @@ Our organization maintains specialized repositories:
 | **Contracts** | Smart contracts (Solidity, Rust, FunC) | [chronos-vault-contracts](https://github.com/Chronos-Vault/chronos-vault-contracts) |
 | **Documentation** | Technical docs and guides (this repo) | [chronos-vault-docs](https://github.com/Chronos-Vault/chronos-vault-docs) |
 | **Security** | Security audits and protocols | [chronos-vault-security](https://github.com/Chronos-Vault/chronos-vault-security) |
-| **SDK** | TypeScript SDK | [chronos-vault-sdk](https://github.com/Chronos-Vault/chronos-vault-sdk) |
 
 ---
 
@@ -79,7 +78,6 @@ Chronos Vault implements enterprise-grade security:
 - **Multi-Signature Vaults**: M-of-N signature requirements
 - **Time-Locked Assets**: Programmable release schedules
 - **Cross-Chain Security**: Mathematical consensus across blockchains
-- **Formal Verification**: 35/35 theorems proven (100% coverage)
 
 ---
 
@@ -89,7 +87,7 @@ Chronos Vault implements enterprise-grade security:
 - **Backend**: Express.js, PostgreSQL, WebSocket
 - **Blockchain**: Ethereum Layer 2 (Arbitrum), Solana, TON
 - **Smart Contracts**: Solidity, Rust/Anchor, FunC
-- **Security**: ZK-SNARKs, Post-quantum cryptography, Formal verification
+- **Security**: ZK-SNARKs, Post-quantum cryptography
 
 ---
 
@@ -155,7 +153,6 @@ Copyright (c) 2025 Chronos Vault
 - **Open Source**: Transparent, auditable, community-driven
 - **Enterprise Ready**: Production-tested security and scalability
 - **Developer Friendly**: Comprehensive APIs and SDKs
-- **Formally Verified**: 100% theorem coverage for critical components
 
 ---
 
