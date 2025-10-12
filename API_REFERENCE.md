@@ -2,7 +2,7 @@
 
 **Version:** 1.0.0  
 **Last Updated:** October 2025  
-**Base URL:** `https://api.chronosvault.com/api`
+**Base URL:** `https://api.chronosvault.org/api`
 
 ---
 
@@ -27,12 +27,12 @@ The Chronos Vault API provides RESTful endpoints for managing multi-chain digita
 
 **Production:**
 ```
-https://api.chronosvault.com/api
+https://api.chronosvault.org/api
 ```
 
 **Testnet:**
 ```
-https://testnet-api.chronosvault.com/api
+https://testnet-api.chronosvault.org/api
 ```
 
 **Local Development:**
