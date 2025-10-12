@@ -125,7 +125,7 @@ Transparency builds trust.
 
 ### Security Issues
 **DO NOT** open public issues for security vulnerabilities.
-Email: security@chronosvault.io
+Email: chronosvault@chronosvault.org
 
 ## Legal
 
