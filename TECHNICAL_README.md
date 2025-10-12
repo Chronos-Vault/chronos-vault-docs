@@ -1,101 +1,158 @@
-# Chronos Vault - Technical README
+# Chronos Vault Technical Documentation
 
-## Trinity Protocol Architecture
+## Project Architecture
 
-Chronos Vault implements mathematical 2-of-3 consensus across three independent blockchains:
-
-### Blockchain Roles
-1. **Arbitrum L2 (PRIMARY)** - Main security layer on Arbitrum Sepolia
-2. **Solana (MONITOR)** - High-frequency validation (2000+ TPS)
-3. **TON (BACKUP)** - Quantum-resistant emergency recovery
-4. **Bitcoin (FEATURE)** - Read-only for Halving Vault tracking
-
-### Security Model
-- **2-of-3 Consensus**: Funds safe even if 1 chain compromised
-- **Attack Probability**: 10^-18 (requires 2+ chains simultaneously)
-- **No Human Validators**: Pure mathematical verification
-
-## V3 Security Features (Deployed Oct 8, 2025)
-
-### Circuit Breakers
-**CrossChainBridgeV3** (`0x39601883CD9A115Aba0228fe0620f468Dc710d54`):
-- Auto-pause on 500% volume spike
-- Auto-pause on 20% proof failure rate
-- 4-hour auto-recovery
-
-**CVTBridgeV3** (`0x00d02550f2a8Fd2CeCa0d6b7882f05Beead1E5d0`):
-- Auto-pause on 500% volume spike
-- Auto-pause on 20% signature failure
-- 2-hour auto-recovery
-
-### Emergency Controls
-**EmergencyMultiSig** (`0xFafCA23a7c085A842E827f53A853141C8243F924`):
-- 2-of-3 multi-signature requirement
-- 48-hour time-lock on actions
-- IMMUTABLE controller (cannot be changed)
-
-## Core Technologies
-
-### Quantum-Resistant Cryptography
-- **CRYSTALS-Kyber**: Post-quantum key encapsulation
-- **CRYSTALS-Dilithium**: Post-quantum signatures
-- **Performance**: 900% improvement with key pooling
-
-### Zero-Knowledge Proofs
-- **zk-SNARKs**: Privacy-preserving vault verification
-- **Proof Types**: Ownership, multi-sig, metadata
-- **Generation Time**: 1.2 seconds (192% faster)
-
-### MEV Protection
-- **Commit-Reveal**: Prevents front-running
-- **Flashbots**: Private mempool submission
-- **Nonce Persistence**: Transaction integrity
-
-## Development Stack
+Chronos Vault is built using a modern, scalable web architecture with blockchain integration:
 
 ### Frontend
-- React.js + TypeScript
-- TailwindCSS + shadcn/ui
-- React Three Fiber (3D visualizations)
-- Wouter (routing)
+
+- **Framework**: React.js with TypeScript
+- **State Management**: React Query for server state
+- **Routing**: Wouter
+- **UI**: TailwindCSS with ShadCN components
+- **Styling**: Custom theme with gradients and animations
 
 ### Backend
-- Express.js + TypeScript
-- PostgreSQL + Drizzle ORM
-- WebSocket for real-time updates
 
-### Blockchain
-- **Arbitrum**: Hardhat + Ethers.js
-- **Solana**: Anchor + web3.js
-- **TON**: Blueprint + TON SDK
+- **Server**: Express.js
+- **Database**: PostgreSQL with DrizzleORM
+- **Authentication**: Multi-chain wallet authentication
 
-## API Endpoints
+### Blockchain Integration
 
-See [API_REFERENCE.md](./API_REFERENCE.md) for complete documentation.
+- **TON**: Primary blockchain using TON Connect SDK
+- **Ethereum**: Integration via ethers.js
+- **Solana**: Integration via @solana/web3.js
+- **Cross-Chain**: Custom bridge implementations
 
-**Key Endpoints**:
-- `/api/bridge/*` - Cross-chain operations
-- `/api/vault-creation/*` - Vault creation with Trinity Protocol
-- `/api/token/*` - CVT token operations
-- `/api/security/*` - Security & monitoring
+## Development Setup
 
-## Smart Contracts (Arbitrum Sepolia)
+### Prerequisites
 
-| Contract | Address |
-|----------|---------|
-| CVT Token | `0xFb419D8E32c14F774279a4dEEf330dc893257147` |
-| CrossChainBridgeV3 | `0x39601883CD9A115Aba0228fe0620f468Dc710d54` |
-| CVTBridgeV3 | `0x00d02550f2a8Fd2CeCa0d6b7882f05Beead1E5d0` |
-| EmergencyMultiSig | `0xFafCA23a7c085A842E827f53A853141C8243F924` |
+- Node.js v20 or higher
+- PostgreSQL database
+- Blockchain API keys (TON, Ethereum, Solana)
 
-## Getting Started
+### Environment Variables
 
-1. Clone: `git clone https://github.com/Chronos-Vault/chronos-vault-platform-.git`
-2. Configure: `export ETHEREUM_NETWORK=arbitrum`
-3. Deploy: See [DEPLOYMENT_GUIDE.md](./DEPLOYMENT_GUIDE.md)
+The following environment variables are required:
 
-## Resources
-- Discord: https://discord.gg/WHuexYSV
-- X: https://x.com/chronosvaultx
+```
+DATABASE_URL=postgresql://user:password@localhost:5432/chronos_vault
+TON_API_KEY=your_ton_api_key
+ETHEREUM_RPC_URL=your_ethereum_rpc_url
+SOLANA_RPC_URL=your_solana_rpc_url
+```
 
-*Last Updated: October 8, 2025*
+### Installation
+
+```bash
+npm install
+npm run db:push  # Initialize database schema
+npm run dev      # Start development server
+```
+
+## Core Components
+
+### Triple-Chain Security System
+
+The security system leverages three blockchains for maximum protection:
+
+- **Ethereum Service**: Provides ownership verification and primary security
+- **Solana Service**: High-frequency monitoring for rapid threat detection
+- **TON Service**: Backup security system and recovery mechanisms
+
+These services are coordinated by the `SecurityServiceAggregator` which manages cross-chain validation.
+
+### Permanent Storage System
+
+Chronos Vault uses Arweave with Bundlr for permanent, decentralized storage:
+
+#### How Storage Works in Chronos Vault
+
+When a user uploads files in our system:
+
+1. **First Upload**: The file is uploaded through our interface to Bundlr
+2. **Permanent Storage**: Bundlr processes the payment and stores the file permanently on Arweave network
+3. **Link to Vault**: The transaction ID (like a receipt) is saved in our database and connected to the user's vault
+4. **Cross-Chain Verification**: We record proof of this storage across multiple blockchains for extra security
+
+This means:
+- Files are stored permanently and can't be deleted
+- Data is completely decentralized (not on our servers)
+- Each file has a unique transaction ID that proves ownership
+- Vaults contain references to these files but not the files themselves
+
+This architecture provides users with both permanent decentralized storage and a user-friendly management interface.
+
+### Cross-Chain Bridge
+
+Chronos Vault implements a secure bridge system:
+
+- Lock-and-mint mechanism for cross-chain asset transfer
+- Multi-signature validator requirements
+- Economic security through slashing mechanisms
+- Cross-chain verification with proof-of-stake
+
+### Zero-Knowledge Privacy Layer
+
+The privacy system uses zero-knowledge proofs to enable:
+
+- Selective disclosure of vault information
+- Range proof generation
+- Cross-chain proof verification
+- Integration with the security infrastructure
+
+## Smart Contracts
+
+### TON Contracts
+
+```
+@name: CV_TON_Jetton
+@max_supply: 21000000000000000 ; 21M with 9 decimals
+@decimals: 9
+@description: ChronosToken - Utility token for Chronos Vault platform
+```
+
+### Ethereum Contracts
+
+```solidity
+contract ChronosToken is ERC20, ERC20Burnable, Ownable, ERC20Permit, ERC20Votes {
+    // Bridge address that can mint/burn tokens for cross-chain operations
+    address public bridge;
+    
+    // Events
+    event BridgeUpdated(address indexed previousBridge, address indexed newBridge);
+}
+```
+
+### Solana Contracts
+
+Implemented using the Solana Program Library (SPL) token standard with Metaplex extensions.
+
+## Testing
+
+```bash
+npm run test        # Run unit tests
+npm run test:e2e    # Run end-to-end tests
+npm run test:chain  # Run blockchain integration tests
+```
+
+## Deployment
+
+```bash
+npm run build       # Build for production
+npm run start       # Start production server
+```
+
+## Security Considerations
+
+- All smart contracts undergo formal verification
+- Security audits are performed by independent third parties
+- Bug bounty program with substantial rewards is maintained
+- Quantum-resistant cryptographic methods for long-term security
+- Defense-in-depth approach to protocol operations
+
+## Support and Contact
+
+For technical inquiries and development support, please contact the Chronos Vault development team at chronosvault@chronosvault.org.

@@ -8,21 +8,21 @@ Trinity Protocol is based on **Byzantine Fault Tolerance (BFT) extended across m
 #### **Mathematical Security Model**
 
 ```
-Security = P(Arbitrum_safe) ∩ P(Solana_safe) ∩ P(TON_safe)
+Security = P(Ethereum_safe) ∩ P(Solana_safe) ∩ P(TON_safe)
 
 Where:
-- P(Arbitrum_safe) = 1 - P(Arbitrum_attack)
-- P(Solana_safe) = 1 - P(Solana_attack)
+- P(Ethereum_safe) = 1 - P(Ethereum_attack)
+- P(Solana_safe) = 1 - P(Solana_attack)  
 - P(TON_safe) = 1 - P(TON_attack)
 
-Attack Success Probability = P(Arbitrum_attack) × P(Solana_attack) × P(TON_attack)
+Attack Success Probability = P(Ethereum_attack) × P(Solana_attack) × P(TON_attack)
 ```
 
 #### **Real-World Numbers**
 
 ```
 Individual Network Attack Probabilities:
-├── Arbitrum L2: P(attack) ≈ 10^-6 (0.0001%)
+├── Ethereum: P(attack) ≈ 10^-6 (0.0001%)
 ├── Solana: P(attack) ≈ 10^-6 (0.0001%)
 ├── TON: P(attack) ≈ 10^-6 (0.0001%)
 
@@ -116,12 +116,12 @@ Implemented Algorithms:
 
 ```
 Single Chain Throughput:
-├── Arbitrum L2: ~15 TPS
+├── Ethereum: ~15 TPS
 ├── Solana: ~3,000 TPS
 ├── TON: ~1,000 TPS
 
 Trinity Protocol Throughput:
-Theoretical Maximum = min(Arbitrum L2, Solana, TON) = 15 TPS
+Theoretical Maximum = min(Ethereum, Solana, TON) = 15 TPS
 
 Optimized Trinity Protocol:
 ├── Parallel Processing: 3 chains process simultaneously
@@ -134,7 +134,7 @@ Throughput = (Batch_Size × Chains × Pipeline_Stages) / Average_Block_Time
            = (50 × 3 × 2) / 0.8 seconds
            = 300 / 0.8
            = 375 TPS per pipeline
-
+           
 Total with 5 pipelines = 375 × 5 = 1,875 TPS ≈ 2,000 TPS
 ```
 
@@ -195,7 +195,7 @@ Security Budget = min(chain_security_budgets) × independence_factor
                 = min($40B, $5B, $2B) × 0.001
                 = $2B × 0.001
                 = $2M effective attack budget
-
+                
 Actual Attack Cost = $50M >> $2M
 Therefore: Economically secure
 ```
@@ -208,7 +208,7 @@ Trinity Protocol uses a **cross-chain PBFT** algorithm:
 
 ```
 PBFT Requirements:
-- Network Size: n = 3 (Arbitrum L2, Solana, TON)
+- Network Size: n = 3 (Ethereum, Solana, TON)
 - Fault Tolerance: f = 1 (can tolerate 1 faulty chain)
 - Safety Requirement: n > 3f → 3 > 3(1) = 3 ✓
 
@@ -227,7 +227,7 @@ Mathematical Properties:
 
 ```
 Finality Calculation:
-├── Arbitrum L2: Probabilistic (12 confirmations ≈ 2.4 minutes)
+├── Ethereum: Probabilistic (12 confirmations ≈ 2.4 minutes)
 ├── Solana: Practical (32 slots ≈ 12.8 seconds)
 ├── TON: Practical (5 seconds average)
 
@@ -335,6 +335,4 @@ Trinity Protocol's mathematics prove it's not just better—it's **inevitable**:
 
 **The mathematics don't lie: Trinity Protocol is the only solution that solves all fundamental problems simultaneously.**
 
----
-
-*This document provides the mathematical foundation for Trinity Protocol's security guarantees. For implementation details, see the [Technical Documentation](https://github.com/Chronos-Vault/chronos-vault-docs).*
+For YZi Labs: **This isn't about believing in a vision—it's about investing in mathematical inevitability.**

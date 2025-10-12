@@ -5,8 +5,8 @@
 ### Token Metrics
 - **Name**: ChronosToken
 - **Symbol**: CVT
-- **Blockchain**: Primary token on TON, wrapped versions on Arbitrum L2 and Solana
-- **Token Standard**: TON Jetton standard, ERC-20 (Arbitrum L2), SPL (Solana)
+- **Blockchain**: Primary token on TON, wrapped versions on Ethereum and Solana
+- **Token Standard**: TON Jetton standard, ERC-20 (Ethereum), SPL (Solana)
 - **Total Supply**: 21,000,000 CVT (fixed)
 - **Decimals**: 9 (TON standard)
 
@@ -57,7 +57,7 @@ The 14,700,000 time-locked tokens are released according to this schedule:
 - **Feature Access**: Premium features require token holdings
 - **Chain-Specific Utility**:
   - TON: Primary fee token, vault security
-  - Arbitrum L2: DeFi strategy access, yield optimization
+  - Ethereum: DeFi strategy access, yield optimization
   - Solana: High-speed features, asset transfers
   - Arweave: Storage credits for permanent data
 
@@ -157,10 +157,10 @@ Benefits from each tier stack with the previous tier's benefits:
 - Primary token with all features
 - Base layer for time-lock mechanics
 
-**Arbitrum L2 Implementation**:
+**Ethereum Implementation**:
 - ERC-20 standard with EIP-2612 permit extension
 - Compatible with DeFi protocols
-- Gas optimization for Arbitrum L2
+- Gas optimization for Ethereum mainnet
 
 **Solana Implementation**:
 - SPL Token standard
@@ -259,7 +259,7 @@ def create_jetton_initial_state():
     }
 ```
 
-### Arbitrum L2 ERC-20 Implementation
+### Ethereum ERC-20 Implementation
 ```solidity
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.20;
