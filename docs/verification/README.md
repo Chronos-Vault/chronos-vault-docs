@@ -274,7 +274,7 @@ See `docs/formal-verification/verification-report.md` for full citations.
 ## 📞 Contact
 
 - **GitHub**: https://github.com/Chronos-Vault/chronos-vault-contracts
-- **Documentation**: https://docs.chronosvault.com
+- **Documentation**: [https://chronosvault.org/docs]
 - **Email**: chronosvault@chronosvault.org
 
 ---
