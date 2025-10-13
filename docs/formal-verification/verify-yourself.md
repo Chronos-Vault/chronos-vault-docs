@@ -277,7 +277,7 @@ git clone https://github.com/ChronosVault/Chronos-Vault.git
 cd Chronos-Vault/formal-proofs && lake build
 ```
 
-If you see "All proofs verified ✅", you've independently confirmed that our 35 security theorems are mathematically correct.
+If you see "All proofs verified ✅", you've independently confirmed that our 35 security theorems are mathematically correct
 
 **No trust required. Just mathematics.**
 
