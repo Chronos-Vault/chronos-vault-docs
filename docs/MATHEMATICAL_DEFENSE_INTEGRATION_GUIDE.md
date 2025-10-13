@@ -722,3 +722,4 @@ Part of Chronos Vault - Multi-Chain Digital Vault Platform
 **Built with ❤️ by the Chronos Vault Team**
 
 For support and questions: https://github.com/Chronos-Vault
+Chronosvault@chronosvault.org
