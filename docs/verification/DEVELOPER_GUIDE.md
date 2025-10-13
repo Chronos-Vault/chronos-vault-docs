@@ -435,7 +435,7 @@ java -jar tla2tools.jar -deadlock tlaplus/specs/TrinityProtocol.tla
 **Bug in Proof?** Create PR with counterexample
 
 **Security Issue?** Email: chronosvault@chronosvault.org
-
+https://chronosvault.org/technical-security-docs
 ---
 
 **Last Updated**: 2025-10-11  
