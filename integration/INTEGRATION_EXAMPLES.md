@@ -1,3 +1,4 @@
+<!-- Chronos Vault - Trinity Protocol™ -->
 # 🔗 Chronos Vault - Integration Examples & Code Samples
 
 **Last Updated:** October 2025  
@@ -6,7 +7,7 @@
 
 ---
 
-This comprehensive guide provides production-ready code examples for integrating Chronos Vault's multi-chain security platform into your applications. All examples feature Trinity Protocol consensus, quantum-resistant encryption, and zero-knowledge privacy.
+This comprehensive guide provides production-ready code examples for integrating Chronos Vault's multi-chain security platform into your applications. All examples feature Trinity Protocol™ consensus, quantum-resistant encryption, and zero-knowledge privacy.
 
 ## Table of Contents
 
