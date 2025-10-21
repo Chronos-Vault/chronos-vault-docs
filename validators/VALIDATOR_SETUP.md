@@ -1,4 +1,5 @@
-# Trinity Protocol Multi-Validator Setup Guide
+<!-- Chronos Vault - Trinity Protocol™ -->
+# Trinity Protocol™ Multi-Validator Setup Guide
 
 **Version:** 1.0.0  
 **Network:** Testnet (Arbitrum Sepolia, Solana Devnet, TON Testnet)  
@@ -8,13 +9,13 @@
 
 ## Overview
 
-This guide explains how to set up the Trinity Protocol's multi-validator infrastructure for 2-of-3 cross-chain consensus across Ethereum Layer 2 (Arbitrum), Solana, and TON blockchains.
+This guide explains how to set up the Trinity Protocol™'s multi-validator infrastructure for 2-of-3 cross-chain consensus across Ethereum Layer 2 (Arbitrum), Solana, and TON blockchains.
 
 ## Validator Architecture
 
 ### 2-of-3 Consensus Model
 
-The Trinity Protocol requires validators on **three independent blockchains**:
+The Trinity Protocol™ requires validators on **three independent blockchains**:
 
 1. **Ethereum Layer 2 (Arbitrum)** - Primary security layer
 2. **Solana** - High-frequency monitoring layer
