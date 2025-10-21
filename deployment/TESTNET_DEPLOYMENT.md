@@ -4,28 +4,45 @@
 
 **Network:** Arbitrum Sepolia (Testnet)  
 **Chain ID:** 421614  
-**Deployment Date:** 2025-10-20  
+**Deployment Date:** 2025-10-21  
 **Deployer:** 0x66e5046D136E82d17cbeB2FfEa5bd5205D962906
 
 ---
 
 ## Deployed Contracts
 
-### CrossChainBridgeOptimized
+### CrossChainBridgeOptimized (Multi-Validator - LATEST)
+- **Address:** `0xf24e41980ed48576Eb379D2116C1AaD075B342C4`
+- **Deployment TX:** `0xcb73a85d4b0433e788e58b244748dfabf30dae576a4d7c52587a6e663eb7513e`
+- **Verified:** ✅ Deployment successful with 9 validators
+- **Explorer:** https://sepolia.arbiscan.io/address/0xf24e41980ed48576Eb379D2116C1AaD075B342C4
+
+### CrossChainBridgeOptimized (Single-Validator - Deprecated)
 - **Address:** `0x4300AbD703dae7641ec096d8ac03684fB4103CDe`
-- **Verified:** ✅ Deployment successful
-- **Explorer:** https://sepolia.arbiscan.io/address/0x4300AbD703dae7641ec096d8ac03684fB4103CDe
+- **Status:** Replaced by multi-validator deployment above
 
 ---
 
 ## Trinity Protocol Configuration
 
 **Emergency Controller:** 0x66e5046D136E82d17cbeB2FfEa5bd5205D962906  
-**Ethereum Validators:** 1 validator (testnet)  
-**Solana Validators:** 1 validator (testnet placeholder)  
-**TON Validators:** 1 validator (testnet placeholder)
 
-> **Note:** For production deployment, replace with real multi-validator setup across all three chains.
+**Ethereum Validators (3):**
+1. 0x0be8788807DA1E4f95057F564562594D65a0C4f9
+2. 0x0A19B76c3C8FE9C88f910C3212e2B44b5b263E26
+3. 0xCf2847d3c872998F5FbFFD7eCb23e8932E890c2d
+
+**Solana Validators (3):**
+1. Epi28nV2op8hFLN8NVapiUiyW3f8LUtE8A5qDVyY3xET
+2. AXDkesdHyAp7egzYdULGJU9A9Ar2VX1JBogLEqaSiWj8
+3. 5oa3idk9PixR1PuYiiQjkfTuDpZXf4Svi2WipkvPX7Nr
+
+**TON Validators (3):**
+1. 0x1520c281cd057eead87e4671d5affd8df4090a07...
+2. 0x228a35ee2682d359d56661c18765aef68d18015b...
+3. 0xe8c759772e0eb2eb5aba1b9233bccd2c8156531e...
+
+**2-of-3 Consensus:** Framework deployed and verified ✅
 
 ---
 
