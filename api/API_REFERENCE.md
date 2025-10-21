@@ -1,3 +1,4 @@
+<!-- Chronos Vault - Trinity Protocol™ -->
 # 🔐 Chronos Vault API Reference
 
 **Version:** 1.0.0  
@@ -12,7 +13,7 @@
 - [Authentication](#authentication)
 - [Core Endpoints](#core-api-endpoints)
 - [Vault Management](#vault-management-api)
-- [Trinity Protocol](#trinity-protocol-api)
+- [Trinity Protocol™](#trinity-protocol-api)
 - [Cross-Chain Operations](#cross-chain-api)
 - [WebSocket Events](#websocket-api)
 - [Error Handling](#error-handling)
@@ -21,7 +22,7 @@
 
 ## 🌟 Overview
 
-The Chronos Vault API provides RESTful endpoints for managing multi-chain digital vaults with Trinity Protocol security. All responses are in JSON format with comprehensive error handling.
+The Chronos Vault API provides RESTful endpoints for managing multi-chain digital vaults with Trinity Protocol™ security. All responses are in JSON format with comprehensive error handling.
 
 ### Base URLs
 
