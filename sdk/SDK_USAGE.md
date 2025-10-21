@@ -1,3 +1,4 @@
+<!-- Chronos Vault - Trinity Protocol™ -->
 # Chronos Vault SDK Usage Guide
 
 ## Overview
