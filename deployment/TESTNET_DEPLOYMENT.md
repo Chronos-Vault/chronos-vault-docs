@@ -1,3 +1,4 @@
+<!-- Chronos Vault - Trinity Protocol™ -->
 # Chronos Vault Testnet Deployment
 
 ## Deployment Summary
@@ -23,7 +24,7 @@
 
 ---
 
-## Trinity Protocol Configuration
+## Trinity Protocol™ Configuration
 
 **Emergency Controller:** 0x66e5046D136E82d17cbeB2FfEa5bd5205D962906  
 
@@ -108,7 +109,7 @@
 
 ## Security Architecture
 
-### Trinity Protocol (2-of-3 Consensus)
+### Trinity Protocol™ (2-of-3 Consensus)
 - **Arbitrum (Ethereum L2):** Primary security layer
 - **Solana:** High-frequency monitoring
 - **TON:** Emergency recovery + quantum-safe storage
@@ -120,7 +121,7 @@
 4. Verifiable Delay Functions (Wesolowski VDF)
 5. AI + Cryptographic Governance
 6. Quantum-Resistant Cryptography (ML-KEM-1024, CRYSTALS-Dilithium-5)
-7. Trinity Protocol Multi-Chain Consensus
+7. Trinity Protocol™ Multi-Chain Consensus
 
 ---
 
