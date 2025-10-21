@@ -1,3 +1,4 @@
+<!-- Chronos Vault - Trinity Protocol™ -->
 # ChronosToken (CVT) Tokenomics Specification
 
 ## Token Fundamentals
