@@ -1,6 +1,15 @@
 [![Formally Verified](https://img.shields.io/badge/Formally_Verified-35%2F35_Theorems-green.svg)](./docs/formal-verification/)
 # Chronos Vault Documentation
 
+
+## Latest Deployment
+
+- **Contract**: `0x4300AbD703dae7641ec096d8ac03684fB4103CDe`
+- **Network**: Arbitrum Sepolia
+- **Explorer**: https://sepolia.arbiscan.io/address/0x4300AbD703dae7641ec096d8ac03684fB4103CDe
+- **Gas Savings**: 16.0% CrossChainBridge, 19.7% ChronosVault
+- **Lean Proofs**: 14/22 theorems proven (12/12 storage packing complete)
+
 ![version](https://img.shields.io/badge/version-1.0.0-blue)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?logo=typescript)
 ![React](https://img.shields.io/badge/React-18-61DAFB?logo=react)
