@@ -4,9 +4,9 @@
 
 ## Latest Deployment
 
-- **Contract**: `0x4300AbD703dae7641ec096d8ac03684fB4103CDe`
+- **Contract**: `0x83DeAbA0de5252c74E1ac64EDEc25aDab3c50859`
 - **Network**: Arbitrum Sepolia
-- **Explorer**: https://sepolia.arbiscan.io/address/0x4300AbD703dae7641ec096d8ac03684fB4103CDe
+- **Explorer**: https://sepolia.arbiscan.io/address/0x83DeAbA0de5252c74E1ac64EDEc25aDab3c50859
 - **Gas Savings**: 16.0% CrossChainBridge, 19.7% ChronosVault
 - **Lean Proofs**: 14/22 theorems proven (12/12 storage packing complete)
 
