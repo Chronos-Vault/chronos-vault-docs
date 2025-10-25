@@ -124,14 +124,14 @@ Unlike traditional platforms that rely on security audits (human review), Chrono
 - 100% coverage of specified security properties
 
 **Achievement**:
-- **35/35 theorems proven** using Lean 4
+- **14/22 theorems proven** using Lean 4 (8 proof sketches remaining)
 - Automated verification via GitHub Actions
 - Anyone can verify: `cd formal-proofs && lake build`
 
 **Coverage**:
-- 13 theorems: Smart contracts (ChronosVault, CVTBridge, CrossChainBridge)
-- 13 theorems: Cryptography (VDF, MPC, ZK, Quantum)
-- 9 theorems: Consensus (Trinity Protocol™, AI Governance)
+- 12/12 theorems: Storage packing and gas optimization (PROVEN ✅)
+- 2/10 theorems: Smart contracts (ChronosVault, CVTBridge, CrossChainBridge) - 8 proof sketches remaining
+- Cryptography, Consensus, and Trinity Protocol: Proof sketches prepared, formal proofs in progress
 
 ---
 
@@ -160,7 +160,7 @@ When all 7 layers work together:
 
 ```
 Security = Trinity(2/3) ∧ ZK(2^256) ∧ Quantum(lattice) ∧ 
-           VDF(sequential) ∧ MPC(3/5) ∧ Formal(35/35) ∧ AI(validated)
+           VDF(sequential) ∧ MPC(3/5) ∧ Formal(14/22) ∧ AI(validated)
 ```
 
 **Result**: Attack requires:
@@ -188,7 +188,7 @@ cd chronos-vault-contracts/formal-proofs
 # Install Lean 4
 curl https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh -sSf | sh
 
-# Verify all 35 theorems
+# Verify all 14 proven theorems (8 proof sketches in progress)
 lake build
 ```
 
@@ -248,7 +248,7 @@ Smart Contract → Security Audit → "No issues found" → Deploy
 ```
 Smart Contract → Formal Proofs → Mathematical Guarantee → Deploy
                        ↓
-                35/35 Theorems Proven
+                14/22 Theorems Proven ✅ (8 sketches in progress)
                        ↓
             Anyone Can Verify in 5 Minutes
 ```
@@ -308,4 +308,4 @@ Security comes from **mathematical hardness**, not algorithm secrecy.
 
 **"Trust Math, Not Humans"** - Every security claim is mathematically provable, cryptographically enforced, and independently verifiable.
 
-*Last verified: October 13, 2025 - All 35/35 theorems proven ✅*
+*Last verified: October 25, 2025 - 14/22 theorems proven ✅ (8 proof sketches in progress)*
