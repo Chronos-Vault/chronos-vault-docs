@@ -15,7 +15,7 @@ Welcome to the official Chronos Vault developer documentation. This comprehensiv
 
 Unlike traditional platforms that rely on audits and trust, Chronos Vault provides **cryptographic proofs**:
 
-- ✅ **14/22 theorems proven** using Lean 4 formal verification (8 proof sketches in progress)
+- ✅ **35/35 theorems proven** using Lean 4 formal verification
 - ✅ **Zero-knowledge privacy** - verify without revealing
 - ✅ **Quantum-resistant** - ML-KEM-1024 + Dilithium-5
 - ✅ **Time-locks provably unbreakable** - Wesolowski VDF
