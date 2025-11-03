@@ -2,7 +2,7 @@
 
 <div align="center">
 
-**Comprehensive Technical Documentation for Trinity Protocol v3.0 - Multi-Chain Digital Vault Platform**
+**Comprehensive Technical Documentation for Trinity Protocol v3.1 - Multi-Chain Digital Vault Platform**
 
 ![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)
 ![Lean 4](https://img.shields.io/badge/Lean_4-78/78_Proven-brightgreen?style=for-the-badge)
@@ -19,7 +19,7 @@
 ## 📋 Table of Contents
 
 - [Quick Start](#-quick-start)
-- [Trinity Protocol v3.0](#-trinity-protocol-v30)
+- [Trinity Protocol v3.1](#-trinity-protocol-v30)
 - [Architecture](#-architecture)
 - [Deployed Contracts](#-deployed-contracts)
 - [Contract Documentation](#-contract-documentation)
@@ -92,7 +92,7 @@ lake build
 
 ---
 
-## 🎯 Trinity Protocol v3.0
+## 🎯 Trinity Protocol v3.1
 
 ### Production Status
 
@@ -135,7 +135,7 @@ Trinity Protocol is a **mathematically provable** 2-of-3 consensus verification 
 
 | Blockchain | Role | Purpose | Contract |
 |------------|------|---------|----------|
-| **Arbitrum L2** | Primary Security | Main security layer with low fees | `0x4a8Bc58f441Ae7E7eC2879e434D9D7e31CF80e30` |
+| **Arbitrum L2** | Primary Security | Main security layer with low fees | `0x3E205dc9881Cf0E9377683aDd22bC1aBDBdF462D` |
 | **Solana** | Rapid Validation | High-frequency monitoring | `5oD8S1TtkdJbAX7qhsGticU7JKxjwY4AbEeBdnkUrrKY` |
 | **TON** | Quantum Backup | Emergency recovery + post-quantum crypto | `EQDx6yH5WH3Ex47h0PBnOBMzPCsmHdnL2snts3DZBO5CYVVJ` |
 
@@ -177,13 +177,13 @@ Trinity Protocol is a **mathematically provable** 2-of-3 consensus verification 
 
 ## 📦 Deployed Contracts
 
-### Trinity Protocol v3.0 Addresses
+### Trinity Protocol v3.1 Addresses
 
 **Arbitrum Sepolia (Testnet):**
 
 | Contract | Address | Version | Explorer |
 |----------|---------|---------|----------|
-| CrossChainBridgeOptimized | `0x4a8Bc58f441Ae7E7eC2879e434D9D7e31CF80e30` | v2.2 | [View →](https://sepolia.arbiscan.io/address/0x4a8Bc58f441Ae7E7eC2879e434D9D7e31CF80e30) |
+| CrossChainBridgeOptimized | `0x3E205dc9881Cf0E9377683aDd22bC1aBDBdF462D` | v2.2 | [View →](https://sepolia.arbiscan.io/address/0x3E205dc9881Cf0E9377683aDd22bC1aBDBdF462D) |
 | HTLCBridge | `0x6cd3B1a72F67011839439f96a70290051fd66D57` | v2.0 | [View →](https://sepolia.arbiscan.io/address/0x6cd3B1a72F67011839439f96a70290051fd66D57) |
 | ChronosVault | `0x99444B0B1d6F7b21e9234229a2AC2bC0150B9d91` | v3.0 | [View →](https://sepolia.arbiscan.io/address/0x99444B0B1d6F7b21e9234229a2AC2bC0150B9d91) |
 | CVT Token | `0xFb419D8E32c14F774279a4dEEf330dc893257147` | - | [View →](https://sepolia.arbiscan.io/address/0xFb419D8E32c14F774279a4dEEf330dc893257147) |
