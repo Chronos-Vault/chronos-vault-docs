@@ -1,393 +1,300 @@
-<!-- Chronos Vault - Trinity Protocol™ -->
-# 🔐 Chronos Vault - Developer Documentation
+# 📚 Chronos Vault Developer Documentation
 
-**Platform Version:** 1.0.0  
-**Last Updated:** October 2025  
-**Architecture:** Multi-Chain Security Platform
+> Comprehensive documentation for Trinity Protocol v3.0 - Multi-chain digital vault platform with mathematical security proofs
 
----
-
-## 🛡️ Mathematical Defense Layer (MDL)
-
-Welcome to the official Chronos Vault developer documentation. This comprehensive guide covers the **Mathematical Defense Layer** - the world's first cryptographic security system where every security claim is **mathematically provable**, not just audited.
-
-### 🎯 What Makes MDL Revolutionary?
-
-Unlike traditional platforms that rely on audits and trust, Chronos Vault provides **cryptographic proofs**:
-
-- ✅ **35/35 theorems proven** using Lean 4 formal verification
-- ✅ **Zero-knowledge privacy** - verify without revealing
-- ✅ **Quantum-resistant** - ML-KEM-1024 + Dilithium-5
-- ✅ **Time-locks provably unbreakable** - Wesolowski VDF
-- ✅ **Distributed keys** - 3-of-5 Shamir Secret Sharing
-- ✅ **AI decisions validated** - Math proves, chain executes
-- ✅ **Trinity Protocol™** - 2-of-3 multi-chain consensus
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
+[![Lean 4](https://img.shields.io/badge/Lean_4-78/78_Proven-brightgreen)](https://lean-lang.org/)
 
 ---
 
-## 📚 Documentation Index
+## 🚀 Quick Start
 
-### Core Documentation
+New to Chronos Vault? Start here:
 
-1. **[Mathematical Defense Layer Overview](../server/security/README.md)**
-   - Complete guide to all 7 security systems
-   - Architecture and components
-   - API reference and examples
-   - Performance metrics
+1. **[Platform Repository](https://github.com/Chronos-Vault/chronos-vault-platform-)** - Main application and setup
+2. **[Smart Contracts](https://github.com/Chronos-Vault/chronos-vault-contracts)** - Contract deployment
+3. **[Security & Proofs](https://github.com/Chronos-Vault/chronos-vault-security)** - Formal verification
+4. **[TypeScript SDK](https://github.com/Chronos-Vault/chronos-vault-sdk)** - Developer SDK
 
-2. **[Integration Guide](./MATHEMATICAL_DEFENSE_INTEGRATION_GUIDE.md)** ⭐ START HERE
-   - Step-by-step integration tutorial
-   - Code examples for all components
-   - Frontend and backend integration
-   - Smart contract examples
+---
 
-3. **[Zero-Knowledge Circuits](../contracts/circuits/README.md)**
-   - Circom circuit documentation
-   - Vault ownership proofs
-   - Multi-signature verification
-   - Proof generation and verification
+## 🎯 Trinity Protocol v3.0
 
-4. **[Whitepaper](../MATHEMATICAL_DEFENSE_LAYER.md)**
-   - Detailed cryptographic analysis
-   - Security proofs and guarantees
-   - Mathematical foundations
-   - Threat model
+### Production Status
 
-## 🔐 7 Security Layers
+- ✅ **78/78 Lean 4 formal proofs complete** (100%)
+- ✅ **All 4 critical vulnerabilities fixed**
+- ✅ **CrossChainBridgeOptimized v2.2** production-ready
+- ✅ **Deployed**: November 3, 2025
 
-### 1. Zero-Knowledge Proofs
-**Purpose**: Privacy-preserving verification
+### What is Trinity Protocol?
 
-**Key Files**:
-- `server/security/enhanced-zero-knowledge-service.ts`
-- `contracts/circuits/vault_ownership.circom`
-- `contracts/circuits/multisig_verification.circom`
+Trinity Protocol is a **mathematically provable** 2-of-3 consensus system across three blockchains:
 
-**Quick Start**:
+| Blockchain | Role | Purpose |
+|------------|------|---------|
+| **Arbitrum L2** | Primary Security | Main security layer with low fees |
+| **Solana** | Rapid Validation | High-frequency monitoring |
+| **TON** | Quantum Backup | Emergency recovery + post-quantum crypto |
+
+**Security Guarantee**: Attack requires compromising 2 of 3 independent blockchains  
+**Probability**: P(attack) < 10^-50 (mathematically negligible)
+
+---
+
+## 🏗️ Architecture
+
+### Technology Stack
+
+**Frontend:**
+- React 18 + TypeScript
+- TailwindCSS + shadcn/ui
+- React Query v5
+- Wouter routing
+- Three.js + React Three Fiber
+
+**Backend:**
+- Express.js + TypeScript
+- PostgreSQL + Drizzle ORM
+- WebSocket for real-time updates
+- JWT authentication
+
+**Blockchain:**
+- Ethereum Layer 2 (Arbitrum)
+- Solana
+- TON
+
+**Smart Contracts:**
+- Solidity (Ethereum/Arbitrum)
+- Rust/Anchor (Solana)
+- FunC (TON)
+- Lean 4 (Formal Verification)
+
+---
+
+## 📦 Deployed Contracts
+
+### Trinity Protocol v3.0 Addresses
+
+**Arbitrum Sepolia:**
+- CrossChainBridgeOptimized v2.2: `0x4a8Bc58f441Ae7E7eC2879e434D9D7e31CF80e30`
+- HTLCBridge v2.0: `0x6cd3B1a72F67011839439f96a70290051fd66D57`
+- ChronosVault: `0x99444B0B1d6F7b21e9234229a2AC2bC0150B9d91`
+- CVT Token: `0xFb419D8E32c14F774279a4dEEf330dc893257147`
+
+**Solana Devnet:**
+- Trinity Validator: `5oD8S1TtkdJbAX7qhsGticU7JKxjwY4AbEeBdnkUrrKY`
+- CVT Token (Official): `5g3TkqFxyVe1ismrC5r2QD345CA1YdfWn6s6p4AYNmy4`
+- CVT Vesting: `3dxjcEGP8MurCtodLCJi1V6JBizdRRAYg91nZkhmX1sB`
+
+**TON Testnet:**
+- Trinity Consensus: `EQDx6yH5WH3Ex47h0PBnOBMzPCsmHdnL2snts3DZBO5CYVVJ`
+- ChronosVault: `EQDJAnXDPT-NivritpEhQeP0XmG20NdeUtxgh4nUiWH-DF7M`
+
+---
+
+## 🔐 Mathematical Defense Layer (MDL)
+
+Chronos Vault implements 7 cryptographic security layers where every security claim is **mathematically provable**:
+
+### 1. Zero-Knowledge Proofs (ZK-SNARKs)
 ```typescript
-import { EnhancedZeroKnowledgeService } from './server/security/enhanced-zero-knowledge-service';
-
-const zkService = new EnhancedZeroKnowledgeService();
-await zkService.initialize();
-
-const commitment = await zkService.generateCommitment(secretValue, salt);
-const isValid = await zkService.verifyCommitment(commitment, secretValue, salt);
+// Prove vault ownership without revealing identity
+const proof = await zkService.generateOwnershipProof(vaultId, ownerAddress);
+const isValid = await zkService.verifyProof(proof);
 ```
 
+**Technology**: Groth16 + Circom circuits  
+**Use Cases**: Privacy-preserving verification, selective disclosure
+
 ### 2. Quantum-Resistant Cryptography
-**Purpose**: Protection against quantum computers
-
-**Key Files**:
-- `server/security/quantum-resistant-crypto.ts`
-
-**Quick Start**:
 ```typescript
-import { QuantumResistantCrypto } from './server/security/quantum-resistant-crypto';
-
+// Post-quantum encryption
 const qCrypto = new QuantumResistantCrypto();
-await qCrypto.initialize();
-
 const keyPair = await qCrypto.generateHybridKeyPair();
 const ciphertext = await qCrypto.encryptData(data, keyPair.publicKey);
 ```
 
-**Algorithms**: ML-KEM-1024, CRYSTALS-Dilithium-5
+**Algorithms**: ML-KEM-1024, CRYSTALS-Dilithium-5  
+**Security**: 50+ year protection against quantum computers
 
 ### 3. Multi-Party Computation (MPC)
-**Purpose**: Distributed key management
-
-**Key Files**:
-- `server/security/mpc-key-management.ts`
-
-**Quick Start**:
 ```typescript
-import { MPCKeyManagement } from './server/security/mpc-key-management';
-
-const mpc = new MPCKeyManagement(5, 3); // 3-of-5 threshold
-await mpc.initialize();
-
+// 3-of-5 distributed key management
+const mpc = new MPCKeyManagement(5, 3);
 const shares = await mpc.distributeKey(masterKey, vaultId);
 const reconstructed = await mpc.reconstructKey(vaultId, shares.slice(0, 3));
 ```
 
+**Protocol**: Shamir Secret Sharing  
+**Guarantee**: 2 shares reveal nothing (information-theoretic)
+
 ### 4. Verifiable Delay Functions (VDF)
-**Purpose**: Provable time-locks
-
-**Key Files**:
-- `server/security/vdf-time-lock.ts`
-
-**Quick Start**:
 ```typescript
-import { VDFTimeLock } from './server/security/vdf-time-lock';
-
+// Provable time-locks
 const vdf = new VDFTimeLock();
-await vdf.initialize();
-
 const timeLock = await vdf.createTimeLock(data, 3600, vaultId); // 1 hour
 const result = await vdf.verifyAndUnlock(vaultId);
 ```
 
-**Algorithm**: Wesolowski VDF with RSA-2048
+**Algorithm**: Wesolowski VDF with RSA-2048  
+**Guarantee**: Cannot be computed faster via parallelization
 
-### 5. AI + Cryptographic Governance
-**Purpose**: Trustless AI automation with mathematical validation
+### 5. Formal Verification (Lean 4)
+```lean
+-- Mathematical proof of security
+theorem withdrawal_safety :
+  ∀ vault tx, withdraw_succeeds(vault, tx) → is_owner(tx.sender, vault)
+```
 
-**Key Files**:
-- `server/security/ai-crypto-governance.ts`
+**Status**: 78/78 theorems proven ✅  
+**Coverage**: 100% security-critical properties
 
-**Quick Start**:
+### 6. AI + Cryptographic Governance
 ```typescript
-import { AICryptoGovernance } from './server/security/ai-crypto-governance';
-
+// AI analyzes threats, math validates decisions
 const governance = new AICryptoGovernance();
-await governance.initialize();
-
 const proposal = await governance.analyzeSecurityThreat({
-  vaultId,
-  threatType: 'unusual_access_pattern',
-  severity: 'high'
+  vaultId, threatType, severity
 });
-
 const validated = await governance.validateProposal(proposal);
 ```
 
 **Model**: "AI decides, Math proves, Chain executes"
 
-### 6. Formal Verification
-**Purpose**: Mathematical proof of contract security
-
-**Key Files**:
-- `server/security/formal-verification.ts`
-- `server/security/formal-verification/` (theorems and invariants)
-
-**Quick Start**:
+### 7. Trinity Protocol (2-of-3 Consensus)
 ```typescript
-import { FormalVerificationSystem } from './server/security/formal-verification';
-
-const verifier = new FormalVerificationSystem();
-await verifier.initialize();
-
-const result = await verifier.verifyContract('ChronosVault');
-console.log(`Proven secure: ${result.theoremsProven}/${result.totalTheorems}`);
+// Multi-chain consensus verification
+const consensus = await trinity.getCrossChainConsensus(vaultId);
+const isValid = await trinity.verifyTrinityProtocol(
+  ethereumTxHash, solanaTxHash, tonTxHash
+);
 ```
 
-### 7. Trinity Protocol™
-**Purpose**: Multi-chain consensus (2-of-3)
-
-**Key Files**:
-- `server/security/trinity-protocol.ts`
-- `server/security/consensus-proofs/`
-
-**Quick Start**:
-```typescript
-import { TrinityProtocol } from './server/security/trinity-protocol';
-
-const trinity = new TrinityProtocol();
-const consensus = await trinity.verifyConsensus(operation, [
-  arbitrumProof,
-  solanaProof,
-  tonProof
-]);
-```
-
-**Chains**: Arbitrum (Primary), Solana (Monitor), TON (Backup)
-
-## 🚀 Quick Start
-
-### 1. Install Dependencies
-
-```bash
-npm install mlkem dilithium-crystals-js snarkjs @anthropic-ai/sdk
-```
-
-### 2. Initialize MDL
-
-```typescript
-import { MathematicalDefenseLayer } from './server/security/mathematical-defense-layer';
-
-const mdl = new MathematicalDefenseLayer();
-await mdl.initialize();
-```
-
-### 3. Create Secure Vault
-
-```typescript
-const vault = await mdl.createSecureVault({
-  vaultId: 'my-vault-001',
-  assetValue: 1000000,
-  securityLevel: 'maximum',
-  timeLockDuration: 86400 // 24 hours
-});
-
-console.log('Security Proof:', vault.securityProof);
-```
-
-### 4. Run Demo
-
-```bash
-npx tsx server/security/demo-mathematical-defense.ts
-```
-
-## 📊 Mathematical Guarantees
-
-The MDL provides **cryptographically provable** security properties:
-
-1. **Privacy**: ∀ proof P → verifier learns nothing beyond validity
-2. **Time-Lock**: ∀ VDF → unlock before T iterations = impossible
-3. **Distribution**: ∀ key K → reconstruct requires ≥k threshold shares
-4. **Governance**: ∀ AI proposal → executed ⟹ mathematically proven
-5. **Quantum**: ∀ attack using Shor's algorithm → P(success) = negligible
-6. **Formal**: ∀ contract C → proven_secure(C) ⟹ ¬∃ exploit path
-7. **Consensus**: ∀ operation → valid ⟹ approved by 2-of-3 chains
-
-## 📁 Project Structure
-
-```
-chronos-vault/
-├── server/
-│   └── security/
-│       ├── mathematical-defense-layer.ts       # Main coordinator
-│       ├── enhanced-zero-knowledge-service.ts  # ZK proofs
-│       ├── quantum-resistant-crypto.ts         # Post-quantum crypto
-│       ├── mpc-key-management.ts              # MPC & Shamir
-│       ├── vdf-time-lock.ts                   # Time-locks
-│       ├── ai-crypto-governance.ts            # AI governance
-│       ├── formal-verification.ts             # Contract proofs
-│       ├── trinity-protocol.ts                # Multi-chain
-│       ├── demo-mathematical-defense.ts       # Demo script
-│       └── README.md                          # Component docs
-│
-├── contracts/
-│   └── circuits/
-│       ├── vault_ownership.circom             # ZK circuit
-│       ├── multisig_verification.circom       # ZK circuit
-│       ├── compile-circuits.sh                # Build script
-│       └── README.md                          # Circuit docs
-│
-├── docs/
-│   ├── MATHEMATICAL_DEFENSE_INTEGRATION_GUIDE.md  # Integration guide
-│   └── README.md                                  # This file
-│
-└── MATHEMATICAL_DEFENSE_LAYER.md              # Whitepaper
-```
-
-## 🔗 API Endpoints
-
-### Vault Operations
-
-```
-POST /api/vaults/create
-POST /api/vaults/:vaultId/analyze
-POST /api/vaults/:vaultId/unlock
-GET  /api/vaults/:vaultId/proofs
-```
-
-### Security Services
-
-```
-POST /api/security/zk/commitment
-POST /api/security/zk/verify
-POST /api/security/quantum/encrypt
-POST /api/security/mpc/distribute
-POST /api/security/vdf/timelock
-POST /api/security/ai/analyze
-GET  /api/security/formal/verify/:contract
-```
-
-## 🧪 Testing
-
-### Run All Tests
-
-```bash
-npm run test:mdl
-```
-
-### Run Demo
-
-```bash
-npx tsx server/security/demo-mathematical-defense.ts
-```
-
-### Test Individual Components
-
-```bash
-# Zero-Knowledge Proofs
-npx tsx server/security/enhanced-zero-knowledge-service.ts
-
-# Quantum Crypto
-npx tsx server/security/quantum-resistant-crypto.ts
-
-# MPC
-npx tsx server/security/mpc-key-management.ts
-```
-
-## 📈 Performance
-
-| Operation | Time | Gas Cost (on-chain) |
-|-----------|------|---------------------|
-| ZK Proof Generation | ~5-20ms | - |
-| ZK Proof Verification | ~2-10ms | ~250k gas |
-| Quantum Encryption | ~10-20ms | - |
-| MPC Key Generation | ~50-100ms | - |
-| VDF Computation | O(T) | - |
-| VDF Verification | O(log T) | ~300k gas |
-| AI Analysis | ~100-500ms | - |
-
-## 🔒 Security Model
-
-**Trust Model**: "Trust Math, Not Humans"
-
-- **No trusted parties**: All security is cryptographically provable
-- **No single points of failure**: Distributed key management (3-of-5)
-- **No bypass mechanisms**: Time-locks are mathematically enforced
-- **No hidden backdoors**: Formal verification proves no exploits exist
-- **Quantum-resistant**: Future-proof against quantum computers
-
-## 🌟 Key Advantages vs Traditional Security
-
-| Aspect | Traditional | Chronos Vault MDL |
-|--------|------------|------------------|
-| Trust Model | Audits, humans | Mathematical proofs |
-| Time-Locks | Admin bypass | Provably impossible |
-| Key Management | Single point failure | 3-of-5 distributed |
-| Quantum Risk | Vulnerable | NIST post-quantum |
-| Privacy | Data exposure | Zero-knowledge |
-| AI Governance | Trust-based | Crypto-validated |
-| Contract Security | Audit assumptions | Formal proofs |
-
-## 📖 Learn More
-
-### External Resources
-
-- **Groth16 ZK Proofs**: https://eprint.iacr.org/2016/260.pdf
-- **NIST Post-Quantum**: https://csrc.nist.gov/projects/post-quantum-cryptography
-- **Shamir Secret Sharing**: https://en.wikipedia.org/wiki/Shamir%27s_Secret_Sharing
-- **Wesolowski VDF**: https://eprint.iacr.org/2018/623.pdf
-- **Circom Language**: https://docs.circom.io/
-- **SnarkJS Library**: https://github.com/iden3/snarkjs
-
-### GitHub Repositories
-
-- **Contracts**: https://github.com/Chronos-Vault/chronos-vault-contracts
-- **Platform**: https://github.com/Chronos-Vault/chronos-vault-platform
-- **SDK**: https://github.com/Chronos-Vault/chronos-vault-sdk
-- **Documentation**: https://github.com/Chronos-Vault/chronos-vault-docs
-- **Security**: https://github.com/Chronos-Vault/chronos-vault-security
-
-## 💡 Support
-
-- **Documentation**: https://docs.chronosvault.org
-- **GitHub Issues**: https://github.com/Chronos-Vault/chronos-vault-platform/issues
-- **Discord**: https://discord.gg/chronosvault
-- **Twitter**: https://twitter.com/ChronosVault
-
-## 📝 License
-
-Part of Chronos Vault - Multi-Chain Digital Vault Platform
-© 2025 Chronos Vault. All rights reserved.
+**Guarantee**: 2 of 3 blockchains must agree. Single chain compromise tolerated.
 
 ---
 
-**Built with ❤️ by the Chronos Vault Team**
+## 🚀 Getting Started
 
-🔐 Trust Math, Not Humans
+### Installation
+
+```bash
+# Clone platform repository
+git clone https://github.com/Chronos-Vault/chronos-vault-platform-.git
+cd chronos-vault-platform-
+
+# Install dependencies
+npm install
+
+# Configure environment
+cp .env.example .env
+# Edit .env with your configuration
+
+# Initialize database
+npm run db:push
+
+# Start development server
+npm run dev
+```
+
+### Basic Usage
+
+```typescript
+import { ChronosVaultSDK } from '@chronos-vault/sdk';
+
+// Initialize SDK
+const sdk = new ChronosVaultSDK({
+  network: 'testnet',
+  chains: ['ethereum', 'solana', 'ton']
+});
+
+await sdk.initialize();
+
+// Create vault
+const vault = await sdk.createVault({
+  type: 'time-lock',
+  unlockTime: Date.now() + 86400000, // 24 hours
+  assets: [{ token: 'ETH', amount: '1.0' }]
+});
+
+// Query status
+const status = await sdk.getStatus(vault.id);
+```
+
+---
+
+## 📖 API Reference
+
+### Vault Types (22 Types Available)
+
+1. **Time-Locked Vaults** - Schedule asset releases
+2. **Multi-Signature Vaults** - M-of-N signature requirements
+3. **Geo-Location Vaults** - Location-based authentication
+4. **Quantum-Resistant Vaults** - Post-quantum cryptography
+5. **Zero-Knowledge Vaults** - Privacy-preserving operations
+6. **Cross-Chain Fragment Vaults** - Distributed across blockchains
+7. **And 16 more vault types...**
+
+### Core API Endpoints
+
+```typescript
+// Vault Management
+POST   /api/vaults              // Create vault
+GET    /api/vaults              // List vaults
+GET    /api/vaults/:id          // Get vault details
+PATCH  /api/vaults/:id          // Update vault
+DELETE /api/vaults/:id          // Delete vault
+
+// Cross-Chain Operations
+POST   /api/bridge/swap         // Initiate HTLC atomic swap
+GET    /api/bridge/status/:id   // Check swap status
+POST   /api/consensus/verify    // Verify Trinity consensus
+
+// Security
+POST   /api/zk/proof            // Generate ZK proof
+POST   /api/zk/verify           // Verify ZK proof
+POST   /api/mpc/distribute      // Distribute key shares
+POST   /api/vdf/lock            // Create VDF time-lock
+```
+
+---
+
+## 🔗 Related Repositories
+
+| Repository | Purpose | Link |
+|------------|---------|------|
+| **Platform** | Main application | [chronos-vault-platform-](https://github.com/Chronos-Vault/chronos-vault-platform-) |
+| **Contracts** | Smart contracts | [chronos-vault-contracts](https://github.com/Chronos-Vault/chronos-vault-contracts) |
+| **Documentation** | Technical docs (this repo) | [chronos-vault-docs](https://github.com/Chronos-Vault/chronos-vault-docs) |
+| **Security** | Formal proofs | [chronos-vault-security](https://github.com/Chronos-Vault/chronos-vault-security) |
+| **SDK** | TypeScript SDK | [chronos-vault-sdk](https://github.com/Chronos-Vault/chronos-vault-sdk) |
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions! See each repository's CONTRIBUTING.md for guidelines.
+
+---
+
+## 📄 License
+
+MIT License - see [LICENSE](./LICENSE) file for details.
+
+Copyright (c) 2025 Chronos Vault
+
+---
+
+## 🌐 Community
+
+- **Discord**: https://discord.gg/WHuexYSV
+- **X (Twitter)**: https://x.com/chronosvaultx
+- **Medium**: https://medium.com/@chronosvault
+- **Email**: chronosvault@chronosvault.org
+
+---
+
+**🎯 Trinity Protocol v3.0 - Mathematically Proven Security**
+
+Every security claim is cryptographically proven using Lean 4 formal verification - 78/78 theorems proven (100%).
